@@ -15,7 +15,7 @@ ret, thresh = cv2.threshold(gray, 127, 255, cv2.THRESH_BINARY_INV)
 
 # Find and draw contours
 contours, hierarchy = cv2.findContours(thresh, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
-img_contours = img.copy()
+# img_contours = img.copy()
 # cv2.drawContours(img_contours, contours, -1, (0, 255, 0), 2)
 
 for cnt in contours:
@@ -25,6 +25,6 @@ for cnt in contours:
 
 cv2.imshow("Original Image", img)
 cv2.imshow("Threshold Image", thresh)
-cv2.imshow("Contours", img_contours)
+# cv2.imshow("Contours", img_contours)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
